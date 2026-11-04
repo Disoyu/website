@@ -1,0 +1,41 @@
+[
+  {
+    "id": "gaussian-integral",
+    "title": "高斯积分：从一维到二维",
+    "description": "将积分的平方转化为平面积分，再通过极坐标变换，推导那个熟悉的 √π。",
+    "category": "概率统计",
+    "tags": ["高斯积分", "极坐标", "重积分"],
+    "date": "2026-11-05",
+    "file": "pdfs/gaussian-integral.pdf",
+    "source": "tex/gaussian-integral.tex",
+    "formula": "∫ ℝ e⁻ˣ² dx = √π",
+    "featured": true,
+    "demo": true
+  },
+  {
+    "id": "euler-lagrange",
+    "title": "欧拉–拉格朗日方程的变分推导",
+    "description": "从作用量的驻值条件出发，用分部积分消去变分的导数，得到经典力学中的核心方程。",
+    "category": "经典力学",
+    "tags": ["变分法", "分析力学", "作用量"],
+    "date": "2026-11-05",
+    "file": "pdfs/euler-lagrange.pdf",
+    "source": "tex/euler-lagrange.tex",
+    "formula": "δS = 0",
+    "featured": false,
+    "demo": true
+  },
+  {
+    "id": "taylor-formula",
+    "title": "泰勒公式与积分余项",
+    "description": "从微积分基本定理开始，反复使用分部积分，建立函数的局部多项式展开和余项表达。",
+    "category": "数学分析",
+    "tags": ["泰勒展开", "微积分", "近似"],
+    "date": "2026-11-05",
+    "file": "pdfs/taylor-formula.pdf",
+    "source": "tex/taylor-formula.tex",
+    "formula": "f(x) = Σ aₙ(x − a)ⁿ + Rₙ",
+    "featured": false,
+    "demo": true
+  }
+]

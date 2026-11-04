@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper,fontset=fandol]{ctexart}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,xcolor}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=teal]{hyperref}
+\definecolor{forest}{HTML}{365E48}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\linespread{1.05}
+\ctexset{section={format=\large\bfseries,beforeskip=10pt,afterskip=5pt}}
+\title{\color{forest}泰勒公式与积分余项}
+\author{推演 · 网站示例笔记}
+\date{2026 年 11 月 5 日}
+\begin{document}
+\maketitle
+\begin{center}\small 本文为网站功能演示内容，可替换为自己的 LaTeX 笔记。\end{center}
+\section*{目标与条件}
+设 $n\ge0$，$f\in C^{n+1}(J)$，区间 $J$ 包含 $a$ 与 $x$。证明
+\[
+f(x)=\sum_{k=0}^n\frac{f^{(k)}(a)}{k!}(x-a)^k+R_n(x),\qquad
+R_n(x)=\frac1{n!}\int_a^x f^{(n+1)}(t)(x-t)^n\,\mathrm{d}t.
+\]
+\section*{1. 基础情形}
+当 $n=0$ 时，微积分基本定理给出
+\[f(x)=f(a)+\int_a^x f'(t)\,\mathrm{d}t.\]
+因此结论对 $n=0$ 成立。
+\section*{2. 用分部积分建立递推}
+对 $n\ge1$，将 $f^{(n+1)}(t)\,\mathrm{d}t$ 作为微分项：
+\begin{align*}
+R_n(x)&=\left[\frac{f^{(n)}(t)(x-t)^n}{n!}\right]_a^x
++\frac1{(n-1)!}\int_a^x f^{(n)}(t)(x-t)^{n-1}\,\mathrm{d}t\\
+&=-\frac{f^{(n)}(a)}{n!}(x-a)^n+R_{n-1}(x).
+\end{align*}
+即 $R_{n-1}(x)=\frac{f^{(n)}(a)}{n!}(x-a)^n+R_n(x)$。从基础情形逐次代入，便得到目标公式。
+\section*{3. 余项估计}
+若在 $a$ 与 $x$ 之间有 $|f^{(n+1)}(t)|\le M$，则
+\[
+\boxed{|R_n(x)|\le\frac{M}{(n+1)!}|x-a|^{n+1}.}
+\]
+该估计同样适用于 $x<a$，此时将积分方向反转后取绝对值即可。
+\section*{例：指数函数}
+取 $f(x)=e^x$、$a=0$、$n=2$，当 $|x|\le r$ 时，
+\[
+e^x=1+x+\frac{x^2}{2}+R_2(x),\qquad
+|R_2(x)|\le\frac{e^r}{6}|x|^3.
+\]
+有限阶展开及其误差估计不需要假设无限泰勒级数收敛到原函数。
+\end{document}

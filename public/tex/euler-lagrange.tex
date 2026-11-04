@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper,fontset=fandol]{ctexart}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,xcolor}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=teal]{hyperref}
+\definecolor{forest}{HTML}{365E48}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\linespread{1.05}
+\ctexset{section={format=\large\bfseries,beforeskip=10pt,afterskip=5pt}}
+\title{\color{forest}欧拉--拉格朗日方程的变分推导}
+\author{推演 · 网站示例笔记}
+\date{2026 年 11 月 5 日}
+\begin{document}
+\maketitle
+\begin{center}\small 本文为网站功能演示内容，可替换为自己的 LaTeX 笔记。\end{center}
+\section*{问题与假设}
+设 $L(q,\dot q,t)$ 足够光滑，轨道 $q\in C^2([t_0,t_1])$，端点固定。考虑作用量
+\[ S[q]=\int_{t_0}^{t_1}L(q(t),\dot q(t),t)\,\mathrm{d}t. \]
+寻找使作用量一阶变分为零的轨道。驻值条件不等同于全局最小值条件。
+\section*{1. 构造允许的变分}
+令 $q_\varepsilon=q+\varepsilon\eta$，其中 $\eta$ 为光滑函数，且
+$\eta(t_0)=\eta(t_1)=0$。由链式法则，
+\[
+\delta S=\left.\frac{\mathrm d}{\mathrm d\varepsilon}S[q_\varepsilon]\right|_{\varepsilon=0}
+=\int_{t_0}^{t_1}\left(\frac{\partial L}{\partial q}\eta+
+\frac{\partial L}{\partial\dot q}\dot\eta\right)\,\mathrm{d}t.
+\]
+\section*{2. 分部积分}
+对含有 $\dot\eta$ 的一项分部积分；由于端点变分为零，边界项消失：
+\begin{align*}
+\delta S&=\left[\frac{\partial L}{\partial\dot q}\eta\right]_{t_0}^{t_1}
++\int_{t_0}^{t_1}\left(\frac{\partial L}{\partial q}
+-\frac{\mathrm d}{\mathrm dt}\frac{\partial L}{\partial\dot q}\right)\eta\,\mathrm{d}t\\
+&=\int_{t_0}^{t_1}\left(\frac{\partial L}{\partial q}
+-\frac{\mathrm d}{\mathrm dt}\frac{\partial L}{\partial\dot q}\right)\eta\,\mathrm{d}t.
+\end{align*}
+\section*{3. 应用变分法基本引理}
+若对所有允许的 $\eta$ 都有 $\delta S=0$，则
+\[\boxed{\frac{\mathrm d}{\mathrm dt}\frac{\partial L}{\partial\dot q}
+-\frac{\partial L}{\partial q}=0.}\]
+\section*{检验：保守力下的质点}
+取 $L=\tfrac12m\dot q^2-V(q)$，代入即得
+\[m\ddot q+V'(q)=0,\qquad m\ddot q=-V'(q),\]
+这正是势能为 $V$ 时的一维牛顿运动方程。
+\end{document}

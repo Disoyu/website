@@ -1,0 +1,8 @@
+{
+  "name": "推演",
+  "englishName": "THEORY NOTES",
+  "author": "Disoyu",
+  "description": "一些公式，一些思考。记录从问题出发、一步步抵达结论的过程。",
+  "repository": "https://github.com/Disoyu/website",
+  "about": "这里是 Disoyu 的个人理论推导笔记库，用来整理和分享日常学习中用 LaTeX 写下的推导。比起只记住结论，我更希望保留通往结论的每一步。欢迎阅读，也欢迎通过 GitHub Issues 交流与勘误。"
+}

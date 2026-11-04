@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF 阅读器 · 推演</title>
+  <link rel="stylesheet" href="./vendor/pdfjs/web/pdf_viewer.css">
+  <link rel="stylesheet" href="./src/reader.css">
+  <script type="module" src="./src/reader.js"></script>
+</head>
+<body>
+  <div class="pdf-toolbar" aria-label="PDF 阅读工具">
+    <button id="previous" aria-label="上一页" disabled>‹</button>
+    <label for="page-number" class="sr-only">页码</label>
+    <input id="page-number" type="number" min="1" value="1" disabled>
+    <span id="page-count">/ —</span>
+    <button id="next" aria-label="下一页" disabled>›</button>
+    <label for="zoom" class="sr-only">缩放</label>
+    <select id="zoom" disabled><option value="page-width">适合宽度</option><option value="page-fit">整页显示</option><option value="0.75">75%</option><option value="1">100%</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
+    <span id="loading-status" role="status" aria-live="polite">正在加载 PDF…</span>
+  </div>
+  <div id="viewer-container" tabindex="0" aria-label="PDF 文档，使用滚动浏览页面"><div id="viewer" class="pdfViewer"></div></div>
+  <div id="pdf-error" role="alert" hidden><strong>暂时无法预览此文档</strong><p>请使用上方的「新窗口打开」或「下载 PDF」继续阅读。</p></div>
+</body>
+</html>

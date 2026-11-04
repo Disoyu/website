@@ -1,0 +1,41 @@
+\documentclass[11pt,a4paper,fontset=fandol]{ctexart}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,xcolor}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=teal]{hyperref}
+\definecolor{forest}{HTML}{365E48}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\linespread{1.05}
+\ctexset{section={format=\large\bfseries,beforeskip=10pt,afterskip=5pt}}
+\title{\color{forest}高斯积分：从一维到二维}
+\author{推演 · 网站示例笔记}
+\date{2026 年 11 月 5 日}
+\begin{document}
+\maketitle
+\begin{center}\small 本文为网站功能演示内容，可替换为自己的 LaTeX 笔记。\end{center}
+\section*{问题}
+计算 $I=\int_{-\infty}^{\infty}e^{-x^2}\,\mathrm{d}x$。被积函数没有初等原函数，但定积分可以通过升维求出。
+\section*{1. 先确认积分收敛}
+当 $|x|\ge 1$ 时，$0<e^{-x^2}\le e^{-|x|}$，故积分收敛且 $I>0$。
+\section*{2. 把平方写成平面积分}
+由非负函数的 Tonelli 定理，
+\begin{align*}
+I^2&=\left(\int_{\mathbb R}e^{-x^2}\,\mathrm{d}x\right)
+\left(\int_{\mathbb R}e^{-y^2}\,\mathrm{d}y\right)\\
+&=\iint_{\mathbb R^2}e^{-(x^2+y^2)}\,\mathrm{d}x\,\mathrm{d}y.
+\end{align*}
+\section*{3. 转换为极坐标}
+令 $x=r\cos\theta$、$y=r\sin\theta$，面积元为 $r\,\mathrm{d}r\,\mathrm{d}\theta$，于是
+\[
+I^2=\int_0^{2\pi}\int_0^\infty e^{-r^2}r\,\mathrm{d}r\,\mathrm{d}\theta
+=2\pi\left[-\frac12e^{-r^2}\right]_0^\infty=\pi.
+\]
+由于 $I>0$，得到
+\[\boxed{\displaystyle\int_{-\infty}^{\infty} e^{-x^2}\,\mathrm{d}x=\sqrt{\pi}.}\]
+\section*{推广}
+对 $a>0$，令 $u=\sqrt a\,x$，可得
+\[
+\int_{-\infty}^{\infty}e^{-ax^2}\,\mathrm{d}x=\sqrt{\frac\pi a}.
+\]
+关键不是寻找原函数，而是利用二维空间中的旋转对称性。
+\end{document}

@@ -1,0 +1,9 @@
+dist/
+.tmp/
+node_modules/
+*.aux
+*.log
+*.out
+*.synctex.gz
+.DS_Store
+Thumbs.db

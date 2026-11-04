@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f2">
+  <meta name="description" content="Disoyu 的个人理论推导笔记库，分享由 LaTeX 编译的数学、物理与概率统计 PDF。">
+  <title>推演 · Disoyu 的理论笔记</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./src/styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#library">跳到笔记库</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="推演首页"><span class="brand-mark">∂</span><span><strong data-site-name>推演</strong><small data-english-name>THEORY NOTES</small></span></a>
+      <nav aria-label="主导航">
+        <a class="nav-active" href="#library">笔记库</a>
+        <a href="#topics">专题索引</a>
+        <button class="nav-button" data-about>关于</button>
+      </nav>
+      <a class="github-link" data-repository href="https://github.com/Disoyu/website" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.7-1.6 6.7-7.3A5.7 5.7 0 0 0 19.2 4 5.3 5.3 0 0 0 19 0s-1.3-.4-4.3 1.6a14.8 14.8 0 0 0-7.8 0C3.9-.4 2.6 0 2.6 0a5.3 5.3 0 0 0-.2 4A5.7 5.7 0 0 0 .9 8.2c0 5.7 3.4 6.9 6.7 7.3A3.4 3.4 0 0 0 6.6 18v4" transform="translate(2 1) scale(.9)"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> A PERSONAL COLLECTION OF IDEAS</p>
+        <h1 id="hero-title">把思考写成公式，<br>让推导<span class="title-accent">有迹可循。</span></h1>
+        <p class="hero-description" data-description>一些公式，一些思考。<br>记录从问题出发、一步步抵达结论的过程。</p>
+        <div class="hero-byline"><span class="avatar">D</span><span><strong data-author>Disoyu</strong> 的理论笔记</span><span class="byline-divider"></span><span>Written in L<span class="latex-a">A</span>T<span class="latex-e">E</span>X</span></div>
+      </div>
+      <div class="hero-art" aria-label="高斯函数曲线与高斯积分公式" role="img">
+        <div class="art-topline"><span>FIG. 01 / THE GAUSSIAN INTEGRAL</span><span>↗</span></div>
+        <svg class="gaussian-graph" viewBox="0 0 430 175" aria-hidden="true">
+          <defs><linearGradient id="curve-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#718f68" stop-opacity=".3"/><stop offset="1" stop-color="#718f68" stop-opacity=".02"/></linearGradient></defs>
+          <path d="M32 145H405M215 157V15" stroke="#b8c4ae" stroke-width="1"/>
+          <path d="M401 141l5 4-5 4M211 20l4-5 4 5" fill="none" stroke="#b8c4ae"/>
+          <path d="M40 145C95 145 120 140 144 106S188 29 215 29S261 71 286 109S335 145 390 145Z" fill="url(#curve-fill)"/>
+          <path d="M40 145C95 145 120 140 144 106S188 29 215 29S261 71 286 109S335 145 390 145" fill="none" stroke="#4e7450" stroke-width="2.5"/>
+          <path d="M143 145v-37M287 145v-37M215 29h60" stroke="#9aaf8d" stroke-dasharray="3 5"/>
+          <circle cx="215" cy="29" r="4" fill="#4e7450" stroke="#f1f4e9" stroke-width="2"/>
+          <g fill="#7b8d70" font-family="Georgia,serif" font-size="12" font-style="italic"><text x="406" y="164">x</text><text x="202" y="162">0</text><text x="281" y="26">e<tspan dy="-5" font-size="9">−x²</tspan></text><text x="130" y="163">−1</text><text x="285" y="163">1</text></g>
+        </svg>
+        <div class="hero-equation"><math display="block"><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mi>∞</mi></msubsup><msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><msqrt><mi>π</mi></msqrt></mrow></math></div>
+        <p class="art-caption">每一个简洁的结论背后，都有一条值得记录的路径。</p>
+      </div>
+    </section>
+
+    <section class="library-section" id="library" aria-labelledby="library-heading">
+      <div class="section-heading"><div><span class="section-index">01 / COLLECTION</span><h2 id="library-heading">推导笔记 <span id="total-count" class="count-badge">…</span></h2></div><p>从一个问题开始，向更深处走。</p></div>
+      <div class="library-layout">
+        <aside class="library-sidebar" id="topics">
+          <h3>按专题浏览 <span>⌘</span></h3>
+          <div id="category-list" class="category-list" aria-label="专题筛选"></div>
+          <div class="sidebar-divider"></div>
+          <h3>笔记关键词</h3>
+          <div id="tag-list" class="tag-list" aria-label="关键词筛选"></div>
+          <div class="sidebar-note"><span class="small-math">∴</span><p>不只收藏结论，<br>也收藏抵达它的过程。</p><span>STAY CURIOUS.</span></div>
+        </aside>
+        <div class="library-content">
+          <div class="toolbar">
+            <div class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><label class="sr-only" for="search">搜索标题、摘要或关键词</label><input id="search" type="search" placeholder="搜索标题、摘要或关键词…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
+            <label class="sr-only" for="sort">排序方式</label><select id="sort"><option value="newest">最近更新</option><option value="oldest">最早发布</option><option value="title">标题排序</option></select>
+          </div>
+          <div class="results-heading"><span id="results-label" role="status" aria-live="polite">正在整理笔记…</span><button id="reset-filters" class="text-button" hidden>清除筛选 ×</button><span class="file-label">PDF COLLECTION</span></div>
+          <div id="notes-list" class="notes-list"><div class="loading-state">正在加载笔记…</div></div>
+          <div id="empty-state" class="empty-state" hidden><span>∅</span><h3>暂时没有找到这篇笔记</h3><p>换个关键词，或者回到全部笔记看看。</p><button class="button button-primary" id="empty-reset">查看全部笔记</button></div>
+          <div id="error-state" class="empty-state" hidden><span>!</span><h3>笔记加载失败</h3><p>请检查网络连接后重新加载。</p><button class="button button-primary" id="retry-load">重新加载</button></div>
+          <p class="collection-end" id="collection-end"><span></span>思考仍在继续，笔记慢慢更新<span></span></p>
+        </div>
+      </div>
+    </section>
+    <section class="closing-note"><span class="closing-symbol">“</span><p>公式是思考的缩写，<em>推导是理解的过程。</em></p><button class="text-button" data-about>关于这个笔记库 <span aria-hidden="true">↗</span></button></section>
+  </main>
+  <footer class="site-footer"><span>© <span id="year">2026</span> <span data-author>Disoyu</span> · 推演</span><span>用 LaTeX 记录 · 与好奇心同行</span><a href="#">回到顶部 ↑</a></footer>
+
+  <dialog id="reader-dialog" class="reader-dialog" aria-labelledby="reader-title"><div class="reader-header"><div><span class="section-index">READING ROOM</span><h2 id="reader-title">阅读笔记</h2></div><button class="icon-button" data-close-reader aria-label="关闭阅读窗口">×</button></div><div class="reader-actions"><span id="reader-meta"></span><div><a id="reader-open" target="_blank" rel="noopener noreferrer">新窗口打开 ↗</a><a id="reader-download" download>下载 PDF ↓</a></div></div><p class="reader-tip">可翻页、缩放或选择文字。若预览遇到问题，可在新窗口中打开或下载阅读。</p><iframe id="pdf-frame" title="PDF 笔记阅读器"></iframe></dialog>
+  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><button class="icon-button about-close" data-close-about aria-label="关闭关于窗口">×</button><span class="brand-mark">∂</span><p class="section-index">BEHIND THE NOTES</p><h2 id="about-title">关于这个笔记库</h2><p id="about-copy"></p><div class="about-info">起步说明：目前附带的三篇内容均为示例笔记，用于演示网站功能。后续将由个人笔记替换。</div><a class="button button-primary" data-issues href="https://github.com/Disoyu/website/issues" target="_blank" rel="noopener noreferrer">交流与勘误 ↗</a></dialog>
+  <noscript><p class="noscript">请启用 JavaScript 以使用搜索和阅读器。也可以直接在 <a href="https://github.com/Disoyu/website/tree/main/public/pdfs">GitHub 的 PDF 目录</a>查看笔记。</p></noscript>
+</body>
+</html>
